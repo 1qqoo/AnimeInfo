@@ -1,0 +1,20 @@
+.header {
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.header__title {
+  font-size: 36px;
+  color: var(--color-white);
+  margin-left: -14px;
+}

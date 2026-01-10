@@ -1,0 +1,13 @@
+.search__form {
+  display: flex;
+  color: var(--color-white);
+  gap: 10px;
+}
+.search__lable {
+  font-size: 20px;
+}
+
+.input:focus {
+  padding: 0;
+  outline: 1px solid var(--color-white);
+}
