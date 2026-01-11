@@ -42,17 +42,14 @@ const AnimeInfo = () => {
 
   const savedHandler = (newAnime) => {
     setSavedAnime((state) => {
-      console.log(newAnime);
-      if (state.includes((anime) => anime.title === newAnime.title)) {
-        return state.filter((anime) => anime.title !== newAnime.title);
+      if (state.some((anime) => anime.id === newAnime.id)) {
+        return state.filter((anime) => anime.id !== newAnime.id);
       } else {
         return [...state, newAnime];
       }
     });
-    // setSavedAnime([...savedAnime, newAnime])
   };
 
-  console.log(savedAnime);
   return (
     <div className="anime">
       <Header
