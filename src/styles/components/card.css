@@ -28,3 +28,28 @@
   color: var(--color-white);
   margin: 0 auto;
 }
+
+.card__link {
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.card__link:hover {
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-duration) ease;
+}

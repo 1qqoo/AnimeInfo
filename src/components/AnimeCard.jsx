@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 const AnimeCard = (props) => {
   const { title, banner, id, savedHandler } = props;
   return (
@@ -12,8 +13,17 @@ const AnimeCard = (props) => {
         height={400}
       />
       <h3 className="card__title">{title}</h3>
-      <button>Подробнее</button>
-      <button onClick={() => savedHandler({ title, banner, id })}>
+      <Link
+        className="card__link"
+        to={`/animeInfo/${id}`}
+      >
+        Подробнее
+      </Link>
+
+      <button
+        className="button"
+        onClick={() => savedHandler({ title, banner, id })}
+      >
         Сохранить
       </button>
     </li>

@@ -17,15 +17,15 @@ const Header = (props) => {
         />
         <h1 className="header__title">nimeInfo</h1>
       </div>
-      <nav style={{ marginBottom: 20 }}>
+      <nav className="header__menu">
         <NavLink
           to="/"
           end
         >
-          Основные
+          Меню
         </NavLink>
 
-        <NavLink to="/favorites">Любимые</NavLink>
+        <NavLink to="/favorites">Любимые фильмы</NavLink>
       </nav>
       <SearhForm
         searchAnime={searchAnime}
