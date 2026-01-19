@@ -9,3 +9,4 @@ import './components/header.css';
 import './components/form.css';
 import './components/field.css';
 import './components/card.css';
+import './components/info.css';

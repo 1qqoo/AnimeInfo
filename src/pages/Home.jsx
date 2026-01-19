@@ -7,6 +7,7 @@ const Home = (props) => {
       animeList={animeList}
       filteredAnime={filteredAnime}
       savedHandler={savedHandler}
+      stateButton={false}
     />
   );
 };

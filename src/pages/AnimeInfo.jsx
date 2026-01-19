@@ -14,31 +14,31 @@ const AnimeInfo = (props) => {
   if (!anime) {
     return (
       <div>
-        <h1 className="info__title">Аниме не найдено</h1>
         <Link to="/">← Назад</Link>
       </div>
     );
   }
 
   return (
-    <div>
-      <h1 className="info__title">{anime.title}</h1>
-
+    <div className="info">
       <div className="info__container">
-        <img
-          src={anime.banner}
-          alt={anime.title}
-          width={600}
-          height={700}
-        />
-
+        <div
+          className="info__media"
+          data-title={anime.title}
+        >
+          <img
+            src={anime.banner}
+            alt={anime.title}
+            width={600}
+            height={700}
+          />
+        </div>
         <div>
           <p className="info__description">{anime.description}</p>
-
-          <div>
-            <Link to="/">← Назад</Link>
-          </div>
         </div>
+      </div>
+      <div className="info__link">
+        <Link to="/">← Назад</Link>
       </div>
     </div>
   );

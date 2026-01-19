@@ -13,10 +13,21 @@
   --border: 1px solid var(--color-gray-2);
   --border-radius: 8px;
 
-  --box-shadow: 0 4px 4px -4px rgba(12, 12, 13, 0.05),
+  --box-shadow:
+    0 4px 4px -4px rgba(12, 12, 13, 0.05),
     0 16px 32px -4px rgba(12, 12, 13, 0.1);
 
   --input-height: 40px;
 
   --transition-duration: 0.2s;
+
+  --font-title: clamp(32px, 4.12vw, 60px);
+  --font-description: clamp(16px, 2.23vw, 32px);
+
+  --bp-md: 768px;
+  --bp-xl: 1440px;
+
+  --container-md: 720px;
+  --container-lg: 960px;
+  --container-xl: 1200px;
 }

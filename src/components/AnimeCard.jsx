@@ -1,17 +1,20 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const AnimeCard = (props) => {
-  const { title, banner, id, savedHandler } = props;
+  const { title, banner, id, savedHandler, stateButton } = props;
+  const navigate = useNavigate();
   return (
     <li
       className="card"
-      id={id}
+      onClick={() => navigate(`/animeInfo/${id}`)}
     >
-      <img
-        src={banner}
-        alt={title}
-        width={400}
-        height={400}
-      />
+      <div className="card__media">
+        <img
+          src={banner}
+          alt={title}
+          width={400}
+          height={400}
+        />
+      </div>
       <h3 className="card__title">{title}</h3>
       <Link
         className="card__link"
@@ -22,9 +25,12 @@ const AnimeCard = (props) => {
 
       <button
         className="button"
-        onClick={() => savedHandler({ title, banner, id })}
+        onClick={(element) => {
+          element.stopPropagation();
+          savedHandler({ title, banner, id });
+        }}
       >
-        Сохранить
+        {stateButton ? 'Удалить' : 'Сохранить'}
       </button>
     </li>
   );
