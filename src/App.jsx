@@ -6,22 +6,22 @@ import Favorites from './pages/Favorites';
 import AnimeInfo from './pages/AnimeInfo';
 import animeList from './data/animeList';
 
+const filterBySearch = (list, search) => {
+  if (!search) {
+    return list;
+  }
+  return list.filter(({ title }) => title.toLowerCase().includes(search));
+};
+
 const App = () => {
   const [searchAnime, setSearchAnime] = useState('');
   const [savedAnime, setSavedAnime] = useState([]);
 
   const clearSearchAnime = searchAnime.trim().toLowerCase();
 
-  const filterBySearch = (list, search) => {
-    if (!search) {
-      return list;
-    }
-    return list.filter(({ title }) => title.toLowerCase().includes(search));
-  };
-
   const filteredAnime = useMemo(() => {
     return filterBySearch(animeList, clearSearchAnime);
-  }, [animeList, clearSearchAnime]);
+  }, [clearSearchAnime]);
 
   const savedFilteredAnime = useMemo(() => {
     return filterBySearch(savedAnime, clearSearchAnime);
